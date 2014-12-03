@@ -4,5 +4,6 @@ class ProductController < ApplicationController
 	end 
 
 	def show
+		@product = Product.first
 	end
 end
