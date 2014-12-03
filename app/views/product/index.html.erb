@@ -4,4 +4,5 @@
 
 <%= render partial: 'product',
 		   collection: @products,
+		   locals: {display_link_to_show: true},
 		   as: 'product' %>
