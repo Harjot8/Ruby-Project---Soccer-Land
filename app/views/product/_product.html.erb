@@ -1,4 +1,9 @@
-<section>
+<section class="product">
+	
+	<% if product.favourite_product?(session) %>
+	 	<p>This is your favourite product.</p>
+	 <% end %>
+
 	<% if product.image.present? %>
 		<%= image_tag product.image %>
 	<% end %>
@@ -12,6 +17,10 @@
 	<p><%= product.description %></p>
 	<p><strong><%= product.stock_quantity %></strong></p>
 	<p><strong><%= number_to_currency(product.price) %></strong></p>
+	<p><%= link_to 'Set As Favorite Product', 	
+					save_favourite_product_path(product),
+					method: :post %>
+	</p>
 	<% if product.category.present? %>
 	<p><%= product.category.name %></p>
 	<% end %>
