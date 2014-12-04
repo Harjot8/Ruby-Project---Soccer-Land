@@ -1,0 +1,11 @@
+<h2>Search Results for '<%= params[:search_keywords] %>'</h2>
+
+<% if @products.size.zero? %>
+	<p>No Product Found.</p>
+<% else %>
+<p><%= pluralize(@products.size, 'Product') %> Found.
+	<%= render partial: 'product',
+			   collection: @products,
+			   locals: {display_link_to_show: true},
+			   as: 'product' %>
+<% end %>

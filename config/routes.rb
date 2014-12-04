@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: 'product#index'
 
   get 'product/:id' => 'product#show', constraints: {id: /\d+/}, as: 'product'
+  get 'search_results' => 'product#search_results', as: 'search_results'
+
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
