@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'product/:id' => 'product#show', constraints: {id: /\d+/}, as: 'product'
   get 'search_results' => 'product#search_results', as: 'search_results'
 
-  get 'page/:id' => 'page#show', as: 'page'
+  get 'page/:id/:slug' => 'page#show', as: 'page'
 
   post 'favourite_product/:id' => 'product#save_favourite_product', as: 'save_favourite_product'
   devise_for :admin_users, ActiveAdmin::Devise.config
