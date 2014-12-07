@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   root to: 'product#index'
 
-  get 'product/:id' => 'product#show', constraints: {id: /\d+/}, as: 'product'
+  get 'product/:id/:slug' => 'product#show', constraints: {id: /\d+/}, as: 'product'
   get 'search_results' => 'product#search_results', as: 'search_results'
 
   get 'page/:id/:slug' => 'page#show', as: 'page'

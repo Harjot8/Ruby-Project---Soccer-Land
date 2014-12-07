@@ -3,6 +3,6 @@ class Page < ActiveRecord::Base
 	validates :name, uniqueness: true
 
 	def slug 
-		"tes"
+		name.parameterize
 	end 
 end
