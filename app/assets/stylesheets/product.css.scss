@@ -16,11 +16,14 @@ body{
 	padding-left:200px;
 }
 
-#allProductHeading{
-	margin:0px;
-	background-color:#BD1409;
-	color:white;
-	padding-left:25px;
+#pageShow{
+
+	background-color:white;
+	height:500px;
+
+	h1{
+		font-size:50px;
+	}	
 }
 
 #pageTitle{
@@ -30,8 +33,21 @@ body{
 }
 
 header{
+	height:150px;
 	margin-top:-40px;
 	background-color:#9FE0FD;
+
+	#search{
+		margin-left:900px;
+		margin-top:-50px;
+	}
+}
+
+#allProductHeading{
+	margin-top:-20px;
+	background-color:#BD1409;
+	color:white;
+	padding-left:25px;
 
 	nav {
 		ul{
@@ -44,7 +60,7 @@ header{
 
 			a:link, a:visited{
 				font-size:30px;
-				color:#D05132;	
+				color:black;	
 				text-decoration: none;
 				transition: background-color, color .5s;
 			}
@@ -55,11 +71,6 @@ header{
 			}
 		}
 
-	}
-
-	#search{
-		margin-left:900px;
-		margin-top:-60px;
 	}
 }
 

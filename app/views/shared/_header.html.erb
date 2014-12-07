@@ -1,11 +1,5 @@
 <header>
 	<h1 id="pageTitle">Welcome to Soccer Land</h1>
-	<nav>
-		<ul>
-			<li><%= link_to 'Home', root_path %></li>
-			<li><%= link_to 'About', root_path %></li>
-		</ul>
-	</nav>
 	<br>
 	<div id="search">
 		<%= form_tag search_results_path, method: :get do %>
@@ -14,3 +8,13 @@
 		<% end %>
 	</div>
 </header>
+<div id="allProductHeading">
+	<nav>
+		<ul>
+			<li><%= link_to "Home", root_path %></li>
+			<% @pages.each do |page| %>
+				<li><%= link_to page.name, page_path(page) %></li>
+			<% end %>
+		</ul>
+	</nav>
+</div>

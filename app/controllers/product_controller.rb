@@ -2,6 +2,7 @@ class ProductController < ApplicationController
 	before_action :load_favourite_product, except: :save_favourite_product
 
 	def index 
+		@pages = Page.all
 		@products = Product.all
 		@category = Category.all
 
@@ -15,6 +16,7 @@ class ProductController < ApplicationController
 	end 
 
 	def show
+		@pages = Page.all
 		@product = Product.find(params[:id])
 	end
 
