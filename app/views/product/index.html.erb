@@ -1,15 +1,14 @@
-<h1>Welcome to Soccer Land</h1>
+<div id="indexBody">
+	<h2>All Products </h2>
 
-<h2>All Products </h2>
+	<p>
+		You have visited this page <%= pluralize(@visit_count, 'time') %>.
+		<% if @favourite_product %>
+			Your favourite product is <%= link_to @favourite_product.name, @favourite_product %>.
+		<% end %>
+	</p>
 
-<p>
-	You have visited this page <%= pluralize(@visit_count, 'time') %>.
-	<% if @favourite_product %>
-		Your fovourite product is <%= link_to @favourite_product.name, @favourite_product %>.
-	<% end %>
-</p>
-
-<%= render partial: 'product',
-		   collection: @products,
-		   locals: {display_link_to_show: true},
-		   as: 'product' %>
+	<%= render partial: 'product',
+			   collection: @products,
+			   as: 'product' %>
+</div>

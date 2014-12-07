@@ -1,4 +1,18 @@
-<%= render partial: 'product',
-		   object: @product,
-		   locals: {display_link_to_show: false},
-		   as: 'product' %>
+<section class="showSingleProduct">
+
+	<h1><%= @product.name %></h1>
+	<div class="showImage">
+		<% if @product.image.present? %>
+			<%= image_tag @product.image %>
+		<% end %>
+	</div>
+	<div class="SectionInformation">
+		<p class="productDescription"><%= @product.description %></p>
+
+		<p class="productPrice"><strong><%= number_to_currency(@product.price) %></strong></p>
+		<p><%= link_to 'Set As Favorite Product', 	
+						save_favourite_product_path(@product),
+						method: :post %>
+		</p>
+	</div>
+</section>
