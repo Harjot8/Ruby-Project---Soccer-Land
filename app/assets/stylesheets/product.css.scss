@@ -46,10 +46,12 @@ header{
 				font-size:30px;
 				color:#D05132;	
 				text-decoration: none;
+				transition: background-color, color .5s;
 			}
 
 			a:hover{
-				color:red;	
+				background-color:#22397C;	
+				color:white;
 			}
 		}
 
