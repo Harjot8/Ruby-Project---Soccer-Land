@@ -1,6 +1,9 @@
 <header>
 	<h1 id="pageTitle">Welcome to Soccer Land</h1>
 	<br>
+	<h3>
+		<%= link_to "Login", "#" %> | <%= link_to "Sign Up", "#" %>
+	</h3>
 	<div id="search">
 		<%= form_tag search_results_path, method: :get do %>
 		<%= text_field_tag :search_keywords %>
