@@ -21,6 +21,7 @@ class ProductController < ApplicationController
 	end
 
 	def search_results
+		@pages = Page.all
 		#need to make an variable otherwise easy to be hacked
 		wildcard_keywords = '%' + params[:search_keywords] + '%'
 			

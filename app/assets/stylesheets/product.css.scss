@@ -20,10 +20,19 @@ body{
 
 	background-color:white;
 	height:500px;
+	padding-left:20px;
+	padding-right:20px;
 
 	h1{
 		font-size:50px;
+
 	}	
+
+	p{
+		background-color:#D05132;
+		padding:10px;
+		font-size:40px;
+	}
 }
 
 #pageTitle{
@@ -70,7 +79,6 @@ header{
 				color:white;
 			}
 		}
-
 	}
 }
 
@@ -82,6 +90,10 @@ header{
 		background-color:white;
 		box-shadow: 5px 5px 5px #888888;
 		border-radius: 2em;
+
+		h1{
+			margin-left:20px;
+		}
 
 		.price{
 			border: 1px solid black;

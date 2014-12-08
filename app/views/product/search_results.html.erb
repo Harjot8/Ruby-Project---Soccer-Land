@@ -1,13 +1,3 @@
-<div id="allProductHeading">
-	<nav>
-		<ul>
-			<li><%= link_to "Home", root_path %></li>
-			<% @pages.each do |page| %>
-				<li><%= link_to page.name, page_path(page) %></li>
-			<% end %>
-		</ul>
-	</nav>
-</div>
 <div id="pageBody">
 	<h2>Search Results for '<%= params[:search_keywords] %>'</h2>
 
