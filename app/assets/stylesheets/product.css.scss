@@ -46,9 +46,26 @@ header{
 	margin-top:-40px;
 	background-color:#9FE0FD;
 
+	h3{
+		margin-left:1000px;
+		font-size:25px;
+		width:140px;
+		margin-top:-120px;
+
+		a{
+			color:#E53719;
+			text-decoration: none;
+		}
+
+		a:hover{
+			color:#87C540;
+		}
+	}
+
 	#search{
-		margin-left:900px;
-		margin-top:-50px;
+		margin-left:920px;
+		margin-top:50px;
+
 	}
 }
 
