@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'product/:id' => 'product#show', constraints: {id: /\d+/}, as: 'product'
   get 'search_results' => 'product#search_results', as: 'search_results'
+  get 'category_search_results' => 'product#category_search_results', as: 'category_search_results'
 
   get 'login' => "page#login", as: 'loginPage'
   get 'register' => "page#register", as: 'registerPage'
