@@ -127,6 +127,7 @@ header{
 	padding-left:25px;
 
 	nav {
+		width:400px;
 		ul{
 			list-style-type: none;
 		}
@@ -147,6 +148,12 @@ header{
 				color:white;
 			}
 		}
+	}
+
+	#category_Search{
+		width:400px;
+		margin-top:-38px;
+		margin-left:750px;
 	}
 }
 
