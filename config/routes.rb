@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  
+  resources :customers
+
   root to: 'product#index'
 
   get 'product/:id' => 'product#show', constraints: {id: /\d+/}, as: 'product'
   get 'search_results' => 'product#search_results', as: 'search_results'
+
+  get 'login' => "page#login", as: 'loginPage'
+  get 'register' => "page#register", as: 'registerPage'
 
   get 'page/:id/:slug' => 'page#show', as: 'page'
 

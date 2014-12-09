@@ -3,7 +3,7 @@ class ProductController < ApplicationController
 
 	def index 
 		@pages = Page.all
-		@products = Product.all
+		@products = Product.order("name").page(params[:page]).per(6)
 		@category = Category.all
 
 		if session[:visit_count]
