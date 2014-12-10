@@ -1,8 +1,8 @@
 <div id="pageBody">
 	<div id="styleThis"><%= paginate @products %></div>
-	<h2>All Products </h2>
+	<h2>All Products</h2>
 	<p>
-		You have visited this page<%= pluralize(@visit_count, 'time') %>.
+		<mark>You have visited this page <%= pluralize(@visit_count, 'time') %>.</mark>
 		<% if @favourite_product %>
 			Your favourite product is <%= link_to @favourite_product.name, @favourite_product %>.
 		<% end %>
